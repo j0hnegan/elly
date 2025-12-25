@@ -38,7 +38,7 @@ function StartScreen({ onStartChat }) {
         <img
           src="/images/john.png"
           alt="John"
-          className={`absolute left-0 top-0 z-10 w-[160px] h-[160px] transition-all duration-700 ease-out ${
+          className={`absolute left-0 top-0 z-10 w-[160px] h-[160px] transition-all duration-[350ms] ease-out ${
             showImages
               ? 'opacity-100 scale-100 -rotate-6'
               : 'opacity-0 scale-90 rotate-0'
@@ -49,7 +49,7 @@ function StartScreen({ onStartChat }) {
         <img
           src="/images/elly.png"
           alt="Elly"
-          className={`absolute right-0 top-0 z-10 w-[160px] h-[160px] transition-all duration-700 ease-out ${
+          className={`absolute right-0 top-0 z-10 w-[160px] h-[160px] transition-all duration-[350ms] ease-out ${
             showImages
               ? 'opacity-100 scale-100 rotate-6'
               : 'opacity-0 scale-90 rotate-0'
