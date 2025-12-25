@@ -1,6 +1,6 @@
 export default function ChatHeader({ title, subtitle }) {
   return (
-    <div className="fixed top-0 left-0 right-0 z-10 bg-white border-b border-gray-200 pt-[env(safe-area-inset-top)]">
+    <div className="fixed md:sticky top-0 left-0 right-0 z-10 bg-white border-b border-gray-200 pt-[env(safe-area-inset-top)] md:pt-0">
       <div className="flex items-center h-14 px-4">
         <div className="flex items-center justify-center w-8 h-8 mr-2">
           <svg
