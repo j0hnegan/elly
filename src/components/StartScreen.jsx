@@ -4,7 +4,7 @@ function StartScreen({ onStartChat }) {
   return (
     <div className="relative h-full w-full bg-[#FFC629] px-6">
       {/* Title - 96px from top */}
-      <h1 className="absolute top-[96px] left-0 right-0 text-center text-4xl font-extrabold italic text-black tracking-tight">
+      <h1 className="absolute top-[96px] left-0 right-0 text-center text-4xl font-extrabold text-black tracking-tight">
         YOU MATCHED!
       </h1>
 
