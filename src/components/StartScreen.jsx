@@ -9,9 +9,9 @@ function StartScreen({ onStartChat }) {
   useEffect(() => {
     // Staggered animations
     const headerTimer = setTimeout(() => setShowHeader(true), 100);
-    const imagesTimer = setTimeout(() => setShowImages(true), 400);
-    const heartTimer = setTimeout(() => setShowHeart(true), 700);
-    const buttonTimer = setTimeout(() => setShowButton(true), 1000);
+    const imagesTimer = setTimeout(() => setShowImages(true), 600);    // 0.5s after header
+    const heartTimer = setTimeout(() => setShowHeart(true), 850);     // 0.25s after images
+    const buttonTimer = setTimeout(() => setShowButton(true), 1350);  // 0.5s after heart
 
     return () => {
       clearTimeout(headerTimer);
