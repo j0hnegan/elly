@@ -78,7 +78,7 @@ function StartScreen({ onStartChat }) {
       <div className="absolute bottom-[80px] left-0 right-0 flex justify-center">
         <button
           onClick={onStartChat}
-          className={`px-12 py-4 bg-[#FFF4D9] text-[#C4960C] font-semibold text-[20px] rounded-full shadow-md hover:bg-[#FFEFCC] transition-all duration-500 ease-out ${
+          className={`px-12 py-4 bg-[#FFF4D9] text-[#C4960C] font-semibold text-[20px] rounded-full hover:bg-[#FFEFCC] transition-all duration-500 ease-out ${
             showButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >

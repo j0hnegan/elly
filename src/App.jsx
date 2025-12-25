@@ -27,13 +27,11 @@ function App() {
   // Chat content component (used in both mobile and desktop)
   const ChatContent = () => (
     <div className="flex flex-col h-full w-full bg-white">
-      <div className={`transition-opacity duration-300 ease-out ${showChatHeader ? 'opacity-100' : 'opacity-0'}`}>
-        <ChatHeader
-          title={conversation.meta?.title}
-          onBack={handleBack}
-        />
-      </div>
-      <div className={`flex-1 min-h-0 overflow-hidden transition-opacity duration-300 ease-out ${showMessages ? 'opacity-100' : 'opacity-0'}`}>
+      <ChatHeader
+        title={conversation.meta?.title}
+        onBack={handleBack}
+      />
+      <div className="flex-1 min-h-0 overflow-hidden">
         <MessageList
           messages={conversation.messages || []}
           participants={conversation.meta?.participants || {}}
@@ -56,7 +54,7 @@ function App() {
 
       {/* Chat Screen */}
       <div
-        className={`absolute inset-0 transition-opacity duration-300 ease-out ${
+        className={`absolute inset-0 transition-opacity duration-500 ease-out ${
           showChat ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >

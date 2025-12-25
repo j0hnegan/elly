@@ -23,7 +23,7 @@ export default function MessageList({ messages, participants }) {
       }}
     >
       <div 
-        className="pt-20"
+        className="pt-10"
         style={{
           paddingBottom: `calc(1rem + env(safe-area-inset-bottom))`,
         }}
