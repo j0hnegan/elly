@@ -1,8 +1,11 @@
-export default function ChatHeader({ title, subtitle }) {
+export default function ChatHeader({ title, subtitle, onBack }) {
   return (
     <div className="sticky top-0 z-10 bg-white border-b border-gray-200 pt-[env(safe-area-inset-top)]">
       <div className="flex items-center h-14 px-4">
-        <div className="flex items-center justify-center w-8 h-8 mr-2">
+        <button
+          onClick={onBack}
+          className="flex items-center justify-center w-8 h-8 mr-2"
+        >
           <svg
             className="w-5 h-5 text-gray-600"
             fill="none"
@@ -16,7 +19,7 @@ export default function ChatHeader({ title, subtitle }) {
               d="M15 19l-7-7 7-7"
             />
           </svg>
-        </div>
+        </button>
         <div className="flex-1">
           <h1 className="text-lg font-semibold text-gray-900">{title || 'Elly'}</h1>
           {subtitle && (
