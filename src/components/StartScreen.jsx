@@ -14,14 +14,14 @@ function StartScreen({ onStartChat }) {
         <img
           src="/images/john.png"
           alt="John"
-          className="relative z-10 -rotate-6 -mr-8 w-44 h-52 object-cover rounded-2xl border-[6px] border-white shadow-lg"
+          className="relative z-10 -rotate-6 -mr-8 w-44 h-52 object-cover rounded-2xl shadow-lg"
         />
 
         {/* Right photo (Elly) */}
         <img
           src="/images/elly.png"
           alt="Elly"
-          className="relative z-10 rotate-6 -ml-8 w-44 h-52 object-cover rounded-2xl border-[6px] border-white shadow-lg"
+          className="relative z-10 rotate-6 -ml-8 w-44 h-52 object-cover rounded-2xl shadow-lg"
         />
 
         {/* Heart icon */}
