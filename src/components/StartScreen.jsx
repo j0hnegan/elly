@@ -33,12 +33,12 @@ function StartScreen({ onStartChat }) {
       </h1>
 
       {/* Photos container */}
-      <div className="absolute top-[160px] left-[20px] right-[20px] h-[200px]">
+      <div className="absolute top-[160px] left-0 right-0 flex justify-center items-start">
         {/* Left photo (John) */}
         <img
           src="/images/john.png"
           alt="John"
-          className={`absolute left-0 top-0 z-10 w-[160px] h-[160px] transition-all duration-[600ms] ease-out ${
+          className={`z-10 w-[40%] max-w-[160px] aspect-square -mr-[8%] transition-all duration-[600ms] ease-out ${
             showImages
               ? 'opacity-100 scale-100 -rotate-6'
               : 'opacity-0 scale-90 rotate-0'
@@ -49,7 +49,7 @@ function StartScreen({ onStartChat }) {
         <img
           src="/images/elly.png"
           alt="Elly"
-          className={`absolute right-0 top-0 z-10 w-[160px] h-[160px] transition-all duration-[600ms] ease-out ${
+          className={`z-10 w-[40%] max-w-[160px] aspect-square -ml-[8%] transition-all duration-[600ms] ease-out ${
             showImages
               ? 'opacity-100 scale-100 rotate-6'
               : 'opacity-0 scale-90 rotate-0'
@@ -57,7 +57,7 @@ function StartScreen({ onStartChat }) {
         />
 
         {/* Heart icon */}
-        <div className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[56px]">
+        <div className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 mt-[24px]">
           <div
             className={`w-16 h-16 bg-[#FFD54F] rounded-full flex items-center justify-center shadow-md transition-all duration-500 ease-out ${
               showHeart ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
