@@ -24,7 +24,7 @@ export default function ChatHeader({ title, onBack }) {
           <img
             src="/images/elly.png"
             alt="Elly"
-            className="w-full h-full"
+            className="w-full h-full object-cover scale-[1.15]"
           />
         </div>
         <h1 className="text-lg font-semibold text-gray-900">{title || 'Elly'}</h1>

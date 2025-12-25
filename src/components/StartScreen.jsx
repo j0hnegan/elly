@@ -25,7 +25,7 @@ function StartScreen({ onStartChat }) {
     <div className="relative h-full w-full bg-[#FFC629] px-6">
       {/* Title */}
       <h1
-        className={`absolute top-[96px] left-0 right-0 text-center text-4xl font-extrabold text-black tracking-tight transition-all duration-500 ease-out ${
+        className={`absolute top-[96px] left-0 right-0 text-center text-4xl font-extrabold text-black tracking-tight transition-all duration-700 ease-out ${
           showHeader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
         }`}
       >
@@ -38,7 +38,7 @@ function StartScreen({ onStartChat }) {
         <img
           src="/images/john.png"
           alt="John"
-          className={`absolute left-0 top-0 z-10 w-[160px] h-[160px] transition-all duration-[350ms] ease-out ${
+          className={`absolute left-0 top-0 z-10 w-[160px] h-[160px] transition-all duration-[600ms] ease-out ${
             showImages
               ? 'opacity-100 scale-100 -rotate-6'
               : 'opacity-0 scale-90 rotate-0'
@@ -49,7 +49,7 @@ function StartScreen({ onStartChat }) {
         <img
           src="/images/elly.png"
           alt="Elly"
-          className={`absolute right-0 top-0 z-10 w-[160px] h-[160px] transition-all duration-[350ms] ease-out ${
+          className={`absolute right-0 top-0 z-10 w-[160px] h-[160px] transition-all duration-[600ms] ease-out ${
             showImages
               ? 'opacity-100 scale-100 rotate-6'
               : 'opacity-0 scale-90 rotate-0'
