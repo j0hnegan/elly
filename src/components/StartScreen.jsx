@@ -33,12 +33,12 @@ function StartScreen({ onStartChat }) {
       </h1>
 
       {/* Photos container */}
-      <div className="absolute top-[160px] left-0 right-0 flex justify-center items-start">
+      <div className="absolute top-[160px] left-0 right-0 h-[200px]">
         {/* Left photo (John) */}
         <img
           src="/images/john.png"
           alt="John"
-          className={`z-10 w-[40%] max-w-[160px] aspect-square -mr-[8%] transition-all duration-[600ms] ease-out ${
+          className={`absolute left-[20px] top-0 z-10 w-[calc(50%+20px)] max-h-[200px] transition-all duration-[600ms] ease-out ${
             showImages
               ? 'opacity-100 scale-100 -rotate-6'
               : 'opacity-0 scale-90 rotate-0'
@@ -49,7 +49,7 @@ function StartScreen({ onStartChat }) {
         <img
           src="/images/elly.png"
           alt="Elly"
-          className={`z-10 w-[40%] max-w-[160px] aspect-square -ml-[8%] transition-all duration-[600ms] ease-out ${
+          className={`absolute right-[20px] top-0 z-10 w-[calc(50%+20px)] max-h-[200px] transition-all duration-[600ms] ease-out ${
             showImages
               ? 'opacity-100 scale-100 rotate-6'
               : 'opacity-0 scale-90 rotate-0'
