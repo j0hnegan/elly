@@ -8,24 +8,24 @@ function StartScreen({ onStartChat }) {
         YOU MATCHED!
       </h1>
 
-      {/* Photos container - 40px below header */}
-      <div className="absolute top-[160px] left-0 right-0 flex justify-center items-center">
+      {/* Photos container */}
+      <div className="absolute top-[160px] left-[20px] right-[20px] h-[200px]">
         {/* Left photo (John) */}
         <img
           src="/images/john.png"
           alt="John"
-          className="relative z-10 -rotate-6 -mr-8 w-[160px] h-[160px] object-cover rounded-2xl shadow-lg"
+          className="absolute left-0 top-0 z-10 -rotate-6 w-[160px] h-[160px] shadow-lg"
         />
 
         {/* Right photo (Elly) */}
         <img
           src="/images/elly.png"
           alt="Elly"
-          className="relative z-10 rotate-6 -ml-8 w-[160px] h-[160px] object-cover rounded-2xl shadow-lg"
+          className="absolute right-0 top-0 z-10 rotate-6 w-[160px] h-[160px] shadow-lg"
         />
 
         {/* Heart icon */}
-        <div className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-8">
+        <div className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[56px]">
           <div className="w-20 h-20 bg-[#FFD54F] rounded-full flex items-center justify-center shadow-md">
             <svg
               className="w-10 h-10 text-white"
