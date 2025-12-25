@@ -1,15 +1,3 @@
-# Bumble Match Story
-
-A single-page read-only website that recreates the Bumble messaging UI and replays a conversation between Elly and John.
-
-## Features
-
-- 🎨 Bumble-inspired chat interface
-- 📱 Full-screen mobile view with safe-area support
-- 💻 Centered phone frame on desktop
-- 📝 JSON-driven conversation content
-- ✨ Smooth scrolling and native mobile feel
-
 ## Getting Started
 
 ### Install Dependencies
