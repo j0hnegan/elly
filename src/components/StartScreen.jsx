@@ -11,22 +11,18 @@ function StartScreen({ onStartChat }) {
       {/* Photos container - 40px below header */}
       <div className="absolute top-[160px] left-0 right-0 flex justify-center items-center">
         {/* Left photo (John) */}
-        <div className="relative z-10 -rotate-6 -mr-8">
-          <img
-            src="/images/john.png"
-            alt="John"
-            className="w-44 h-52 object-cover rounded-2xl border-[6px] border-white shadow-lg"
-          />
-        </div>
+        <img
+          src="/images/john.png"
+          alt="John"
+          className="relative z-10 -rotate-6 -mr-8 w-44 h-52 object-cover rounded-2xl border-[6px] border-white shadow-lg"
+        />
 
         {/* Right photo (Elly) */}
-        <div className="relative z-10 rotate-6 -ml-8">
-          <img
-            src="/images/elly.png"
-            alt="Elly"
-            className="w-44 h-52 object-cover rounded-2xl border-[6px] border-white shadow-lg"
-          />
-        </div>
+        <img
+          src="/images/elly.png"
+          alt="Elly"
+          className="relative z-10 rotate-6 -ml-8 w-44 h-52 object-cover rounded-2xl border-[6px] border-white shadow-lg"
+        />
 
         {/* Heart icon */}
         <div className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-8">
