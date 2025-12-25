@@ -55,13 +55,11 @@ function App() {
       </div>
 
       {/* Chat Screen */}
-      <div
-        className={`absolute inset-0 ${
-          showChat ? 'pointer-events-auto' : 'pointer-events-none'
-        }`}
-      >
-        <ChatContent />
-      </div>
+      {showChat && (
+        <div className="absolute inset-0">
+          <ChatContent />
+        </div>
+      )}
     </div>
   );
 
