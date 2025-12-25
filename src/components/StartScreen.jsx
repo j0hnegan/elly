@@ -14,7 +14,7 @@ function StartScreen({ onStartChat }) {
         <div className="relative z-10 -rotate-6 -mr-8">
           <div className="w-44 h-52 bg-white p-1.5 rounded-2xl shadow-lg">
             <img
-              src="/images/john.jpg"
+              src="/images/john.png"
               alt="John"
               className="w-full h-full object-cover rounded-xl"
             />
@@ -25,7 +25,7 @@ function StartScreen({ onStartChat }) {
         <div className="relative z-10 rotate-6 -ml-8">
           <div className="w-44 h-52 bg-white p-1.5 rounded-2xl shadow-lg">
             <img
-              src="/images/elly.jpg"
+              src="/images/elly.png"
               alt="Elly"
               className="w-full h-full object-cover rounded-xl"
             />
