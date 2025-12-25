@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function StartScreen({ onStartChat }) {
+  const [showHeader, setShowHeader] = useState(false);
+  const [showImages, setShowImages] = useState(false);
+  const [showHeart, setShowHeart] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    // Staggered animations
+    const headerTimer = setTimeout(() => setShowHeader(true), 100);
+    const imagesTimer = setTimeout(() => setShowImages(true), 400);
+    const heartTimer = setTimeout(() => setShowHeart(true), 700);
+    const buttonTimer = setTimeout(() => setShowButton(true), 1000);
+
+    return () => {
+      clearTimeout(headerTimer);
+      clearTimeout(imagesTimer);
+      clearTimeout(heartTimer);
+      clearTimeout(buttonTimer);
+    };
+  }, []);
+
   return (
     <div className="relative h-full w-full bg-[#FFC629] px-6">
-      {/* Title - 96px from top */}
-      <h1 className="absolute top-[96px] left-0 right-0 text-center text-4xl font-extrabold text-black tracking-tight">
+      {/* Title */}
+      <h1
+        className={`absolute top-[96px] left-0 right-0 text-center text-4xl font-extrabold text-black tracking-tight transition-all duration-500 ease-out ${
+          showHeader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+        }`}
+      >
         YOU MATCHED!
       </h1>
 
@@ -14,21 +38,33 @@ function StartScreen({ onStartChat }) {
         <img
           src="/images/john.png"
           alt="John"
-          className="absolute left-0 top-0 z-10 -rotate-6 w-[160px] h-[160px]"
+          className={`absolute left-0 top-0 z-10 w-[160px] h-[160px] transition-all duration-700 ease-out ${
+            showImages
+              ? 'opacity-100 scale-100 -rotate-6'
+              : 'opacity-0 scale-90 rotate-0'
+          }`}
         />
 
         {/* Right photo (Elly) */}
         <img
           src="/images/elly.png"
           alt="Elly"
-          className="absolute right-0 top-0 z-10 rotate-6 w-[160px] h-[160px]"
+          className={`absolute right-0 top-0 z-10 w-[160px] h-[160px] transition-all duration-700 ease-out ${
+            showImages
+              ? 'opacity-100 scale-100 rotate-6'
+              : 'opacity-0 scale-90 rotate-0'
+          }`}
         />
 
         {/* Heart icon */}
         <div className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[56px]">
-          <div className="w-20 h-20 bg-[#FFD54F] rounded-full flex items-center justify-center shadow-md">
+          <div
+            className={`w-16 h-16 bg-[#FFD54F] rounded-full flex items-center justify-center shadow-md transition-all duration-500 ease-out ${
+              showHeart ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
+            }`}
+          >
             <svg
-              className="w-10 h-10 text-white"
+              className="w-8 h-8 text-white"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -38,11 +74,13 @@ function StartScreen({ onStartChat }) {
         </div>
       </div>
 
-      {/* Button - 80px from bottom */}
+      {/* Button */}
       <div className="absolute bottom-[80px] left-0 right-0 flex justify-center">
         <button
           onClick={onStartChat}
-          className="px-12 py-4 bg-[#FFF4D9] text-[#C4960C] font-semibold text-[20px] rounded-full shadow-md hover:bg-[#FFEFCC] transition-colors"
+          className={`px-12 py-4 bg-[#FFF4D9] text-[#C4960C] font-semibold text-[20px] rounded-full shadow-md hover:bg-[#FFEFCC] transition-all duration-500 ease-out ${
+            showButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
         >
           Start Chatting
         </button>
