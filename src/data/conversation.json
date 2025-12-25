@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "title": "Elly",
+    "subtitle": "Bumble",
+    "participants": {
+      "elly": { "label": "Elly" },
+      "john": { "label": "John" }
+    }
+  },
+  "messages": [
+      {
+        "id": "m1",
+        "sender": "elly",
+        "text": "Hi John, please read my profile.\nIf interested, then we’ll chat.\nBTW, your profile made me laugh,\nyou’re funny."
+      },
+      {
+        "id": "m2",
+        "sender": "john",
+        "text": "Elly so sorry to hear about the accident, what happened?"
+      },
+      {
+        "id": "m3",
+        "sender": "elly",
+        "text": "It happened, it’s over, life is going to life. 🤷🏽‍♀️ I’m a looking forward type of person. Short version: car slipped on black ice, head on collision, coma, life, miracle."
+      },
+      { "id": "m4", "sender": "elly", "text": "So what brings you to Miami?" },
+      {
+        "id": "m5",
+        "sender": "elly",
+        "text": "The full truth scares/weirds out most people. I’m restarting in life, especially dating. I’m fully recovered and would like to move forward."
+      },
+      { "id": "m6", "sender": "john", "text": "oh no" },
+      { "id": "m7", "sender": "john", "text": "a miracle indeed" },
+      {
+        "id": "m8",
+        "sender": "john",
+        "text": "i’m in a similar situation, i got a really bad concussion in 2021 and it took almost 3 years to fully recover but here i am also starting over"
+      },
+      { "id": "m9", "sender": "elly", "text": "You had a TBI?" },
+      { "id": "m10", "sender": "john", "text": "lol yeah it was wild" },
+      { "id": "m11", "sender": "elly", "text": "Same" },
+      { "id": "m12", "sender": "john", "text": "i mean not in the level of being in a coma but wasn’t great haha" },
+      { "id": "m13", "sender": "elly", "text": "Hey a TBI is a TBI, we’re not about to compare head injuries 😆😘" },
+      { "id": "m14", "sender": "john", "text": "ha" },
+      { "id": "m15", "sender": "john", "text": "what did you do to get over yours?" },
+      { "id": "m16", "sender": "elly", "text": "Mindfulness Meditation with my Neuropsychologist" },
+      { "id": "m17", "sender": "elly", "text": "And Therapy" },
+      { "id": "m18", "sender": "elly", "text": "And time. Took 3 years." },
+      { "id": "m19", "sender": "elly", "text": "What about you?" },
+      {
+        "id": "m20",
+        "sender": "john",
+        "text": "oh yeah, I was very type A personality before so I thought I could just fix it doing every treatment and therapy there was and get back to my life"
+      },
+      {
+        "id": "m21",
+        "sender": "john",
+        "text": "it was like one of those chinese finger traps, the harder i tried to get out of my situation the more i was stuck in it, wasn’t until i started to let go and accepted where i was at that i started to get better, so the time aspect was very important"
+      },
+      {
+        "id": "m22",
+        "sender": "john",
+        "text": "i did EMDR therapy for physical and emotional trauma which was a life changer, really helped my nervous system"
+      },
+      {
+        "id": "m23",
+        "sender": "john",
+        "text": "helped me reframe it as just a freak accident and i went from like cursing that it happened to seeing what a blessing it was"
+      },
+      {
+        "id": "m24",
+        "sender": "john",
+        "text": "also worked with a neuroendocrinologist who put me on a hormone protocol and i went from like 50% better to 100% better in a few weeks"
+      },
+      {
+        "id": "m25",
+        "sender": "elly",
+        "text": "I’ll have to try EMDR. Also Type A — we should create a support group for Type As with TBIs."
+      },
+      { "id": "m26", "sender": "john", "text": "haha" },
+      {
+        "id": "m27",
+        "sender": "elly",
+        "text": "I woke up with retrograde amnesia from my coma. I thought I was in college, I was 34. Lost over a decade of memories."
+      },
+      {
+        "id": "m28",
+        "sender": "john",
+        "text": "i was in a support group but some of the ppl there had made like 0 improvements in like a decade, it was heartbreaking, but also i was like this isn’t gonna be my life and don’t want to dwell on it forever"
+      },
+      { "id": "m29", "sender": "john", "text": "holy shit" },
+      { "id": "m30", "sender": "elly", "text": "I got them back beginning of last year." },
+      { "id": "m31", "sender": "elly", "text": "My accident was Feb 2021." },
+      { "id": "m32", "sender": "john", "text": "wait did they come back all at once, how did that work?" },
+      { "id": "m33", "sender": "elly", "text": "I had to relearn a whole life and society." },
+      { "id": "m34", "sender": "elly", "text": "I call it the great download." },
+      { "id": "m35", "sender": "elly", "text": "It just poured in." },
+      { "id": "m36", "sender": "john", "text": "incredible" },
+      { "id": "m37", "sender": "john", "text": "i had memory issues for like maybe a year but nothing like that lol" },
+      {
+        "id": "m38",
+        "sender": "john",
+        "text": "i also got persistent deja vu for like almost 2 years, i’d get like deja vu 5 times in an hour, it was terrifying tbh"
+      },
+      { "id": "m39", "sender": "john", "text": "it would come in waves" },
+      { "id": "m40", "sender": "elly", "text": "Really?! Very interesting and rather cool" },
+      { "id": "m41", "sender": "elly", "text": "I remembered being dead" },
+      {
+        "id": "m42",
+        "sender": "john",
+        "text": "i mean it was cool the first time it happened, then not so cool, it's a fun feeling to have once in a while not over and over again"
+      },
+      { "id": "m43", "sender": "john", "text": "whoa" },
+      { "id": "m44", "sender": "john", "text": "what was that like and what happened" },
+      { "id": "m45", "sender": "john", "text": "did you see God?" },
+      { "id": "m46", "sender": "elly", "text": "It's a whole thing." },
+      {
+        "id": "m47",
+        "sender": "elly",
+        "text": "Like people usually cry. Healthcare providers who are meant to be objective, have called me a miracle. I think I have survivors guilt."
+      },
+      { "id": "m48", "sender": "elly", "text": "So when are you leaving?" },
+      { "id": "m49", "sender": "john", "text": "wait you’re not gonna tell me if you saw God or heaven/hell? lol" },
+      {
+        "id": "m50",
+        "sender": "john",
+        "text": "the bad news is i’m in boston rn but the good news is i’m moving to miami in a few weeks so not technically there but not leaving"
+      },
+      { "id": "m51", "sender": "elly", "text": "It’s a whole thing. Better in person." },
+      { "id": "m52", "sender": "elly", "text": "I did see, feel, go somewhere else." },
+      { "id": "m53", "sender": "elly", "text": "Maybe when you’re here, we can circle back." },
+      {
+        "id": "m54",
+        "sender": "john",
+        "text": "is this how you get guys to go on dates with you? you promise to reveal one of the great mysteries of life"
+      },
+      { "id": "m55", "sender": "john", "text": "i’d love that" },
+      { "id": "m56", "sender": "elly", "text": "Hahaha, it SCARES them. So no." },
+      { "id": "m57", "sender": "elly", "text": "I signed up like an hour ago, and when I ask people to read my profile I get unmatched." },
+      { "id": "m58", "sender": "elly", "text": "You were the only one that got an extra initial message. Your profile made me laugh." },
+      { "id": "m59", "sender": "elly", "text": "And now chatting, we have this past random yet serious thing in common." },
+      { "id": "m60", "sender": "john", "text": "no such thing as accidents babe" },
+      { "id": "m61", "sender": "john", "text": "wow ppl are unmatching lol, it’s rough out there" },
+      {
+        "id": "m62",
+        "sender": "elly",
+        "text": "I don’t judge, I prefer it. I’m looking to move forward, but this is a part of my past, and I’m also not someone that will chat with you about superficial things, I’ve tried. The only social(?) I have is reddit."
+      },
+      { "id": "m63", "sender": "elly", "text": "Light chit chat, sure! Celebrities, no." },
+      {
+        "id": "m64",
+        "sender": "john",
+        "text": "i didn’t even see you had an accident i just swiped right because i thought you were cute"
+      },
+      { "id": "m65", "sender": "john", "text": "oh yeah gotta go deep" },
+      { "id": "m66", "sender": "elly", "text": "Like all the others did. I mean, I am cute, boobs are nice. 🤷🏽‍♀️" },
+      { "id": "m67", "sender": "elly", "text": "I mean, why do you think I swiped right on you? ...." },
+      { "id": "m68", "sender": "elly", "text": "The baby goat?...." },
+      { "id": "m69", "sender": "elly", "text": "Yes." },
+      { "id": "m70", "sender": "elly", "text": "But also, because you’re cute...’sup 😉" },
+      { "id": "m71", "sender": "elly", "text": "And funny...I mean, you advertised as such, and delivered." },
+      { "id": "m72", "sender": "john", "text": "wow coma girl v confident in her boobs" },
+      { "id": "m73", "sender": "john", "text": "have you dated much since the accident?" },
+      { "id": "m74", "sender": "elly", "text": "Levels 😉 depth?" },
+      { "id": "m75", "sender": "elly", "text": "I have not." },
+      {
+        "id": "m76",
+        "sender": "elly",
+        "text": "Went on 1 date last October with someone that had been in the military and a decade later was still recovering. It was nice but we were both in completely different places."
+      },
+      {
+        "id": "m77",
+        "sender": "elly",
+        "text": "To your point earlier, I never joined support groups because I did not wish to be overwhelmed with suffering. I too am Type A, and stubborn. My family was told I would never do certain things. Have done them all, and well."
+      },
+      { "id": "m78", "sender": "elly", "text": "I was too stubborn to stay dead." },
+      { "id": "m79", "sender": "elly", "text": "What about you?" },
+      { "id": "m80", "sender": "john", "text": "too busy living to die, love it" },
+      {
+        "id": "m81",
+        "sender": "john",
+        "text": "and i’ve dated her and there, attracted girls that either wanted to nurse me back to health lol or didn’t get it, which i don’t blame them, how could someone possibly understand what it’s like to have a brain injury unless they’ve lived through it"
+      },
+      {
+        "id": "m82",
+        "sender": "john",
+        "text": "plus i spent years conserving my energy because i truly didn’t have enough energy to go around, so now i’m selective with who i share my energy with"
+      },
+      {
+        "id": "m83",
+        "sender": "john",
+        "text": "but now that i’m 110% back in business i don’t even really tell ppl i’m dating about the TBI unless it comes up"
+      },
+      {
+        "id": "m84",
+        "sender": "elly",
+        "text": "I understand. The first time I tried apps back in October, anyone I shared it with was met with a lot of curiosity, which is natural, but it felt like they needed a really good story or anecdote to tell, and I didn’t want to be some story somebody tells."
+      },
+      {
+        "id": "m85",
+        "sender": "elly",
+        "text": "What I wanted was for someone to share life experiences with. Exploring the city, going on walks. Life vibrates differently after death. There’s so much to do and see outside. Yet the ones that did want to connect wanted to do it at a bar or restaurant. I don’t like chatting while I’m eating, I want to enjoy and really taste/smell my food, and I don’t drink anymore. The others wanted to have sex, reintroduce me to it, ya know, in case I forgot. Lol"
+      },
+      { "id": "m86", "sender": "elly", "text": "How long ago was it for you?" },
+      { "id": "m87", "sender": "john", "text": "i know all about the sex reintroducers lol" },
+      { "id": "m88", "sender": "elly", "text": "Hahaha" },
+      { "id": "m89", "sender": "elly", "text": "Fun times?" },
+      { "id": "m90", "sender": "john", "text": "how long ago was what?" },
+      { "id": "m91", "sender": "john", "text": "my injury?" },
+      { "id": "m92", "sender": "elly", "text": "Yes" },
+      { "id": "m93", "sender": "elly", "text": "What happened?" },
+      { "id": "m94", "sender": "elly", "text": "I just re-read you said 2021, just like me" },
+      { "id": "m95", "sender": "elly", "text": "Where?" },
+      { "id": "m96", "sender": "elly", "text": "Sorry, for a split second, I thought you were in the other car lol" },
+      { "id": "m97", "sender": "john", "text": "[Voice message 00:03]" },
+      { "id": "m98", "sender": "john", "text": "[Voice message 01:13]" }
+    ]
+}
+
