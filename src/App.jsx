@@ -33,7 +33,7 @@ function App() {
           onBack={handleBack}
         />
       </div>
-      <div className={`flex-1 transition-opacity duration-200 ease-out ${showMessages ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`flex-1 min-h-0 overflow-hidden transition-opacity duration-200 ease-out ${showMessages ? 'opacity-100' : 'opacity-0'}`}>
         <MessageList
           messages={conversation.messages || []}
           participants={conversation.meta?.participants || {}}
