@@ -13,12 +13,17 @@ function App() {
     setShowChat(true);
   };
 
+  const handleBack = () => {
+    setShowChat(false);
+  };
+
   // Chat content component (used in both mobile and desktop)
   const ChatContent = () => (
     <div className="flex flex-col h-full w-full bg-white">
       <ChatHeader
         title={conversation.meta?.title}
         subtitle={conversation.meta?.subtitle}
+        onBack={handleBack}
       />
       <MessageList
         messages={conversation.messages || []}
