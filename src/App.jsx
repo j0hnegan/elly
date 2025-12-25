@@ -1,10 +1,17 @@
+import { useState } from 'react';
 import conversationData from './data/conversation.json';
 import PhoneFrame from './components/PhoneFrame';
 import ChatHeader from './components/ChatHeader';
 import MessageList from './components/MessageList';
+import StartScreen from './components/StartScreen';
 
 function App() {
   const conversation = conversationData;
+  const [showChat, setShowChat] = useState(false);
+
+  const handleStartChat = () => {
+    setShowChat(true);
+  };
 
   // Chat content component (used in both mobile and desktop)
   const ChatContent = () => (
@@ -20,22 +27,44 @@ function App() {
     </div>
   );
 
+  // Main content that switches between start screen and chat
+  const MainContent = () => (
+    <div className="relative h-full w-full overflow-hidden">
+      {/* Start Screen */}
+      <div
+        className={`absolute inset-0 transition-opacity duration-500 ${
+          showChat ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}
+      >
+        <StartScreen onStartChat={handleStartChat} />
+      </div>
+
+      {/* Chat Screen */}
+      <div
+        className={`absolute inset-0 transition-opacity duration-500 ${
+          showChat ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <ChatContent />
+      </div>
+    </div>
+  );
+
   return (
     <>
       {/* Mobile view - full screen */}
       <div className="md:hidden fixed inset-0 w-screen h-screen bg-white overflow-hidden">
         <div className="w-full h-full flex flex-col">
-          <ChatContent />
+          <MainContent />
         </div>
       </div>
 
       {/* Desktop view - phone frame */}
       <PhoneFrame>
-        <ChatContent />
+        <MainContent />
       </PhoneFrame>
     </>
   );
 }
 
 export default App;
-
