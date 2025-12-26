@@ -35,13 +35,13 @@ function StartScreen({ onStartChat }) {
       {/* Photos container - uses padding-bottom to maintain aspect ratio */}
       <div className="absolute top-[160px] left-0 right-0">
         {/* Spacer to set container height based on image size */}
-        <div className="w-[calc(50%+20px)] aspect-square" />
+        <div className="w-[calc(50%+20px)] md:w-[calc(45%+18px)] aspect-square" />
 
         {/* Left photo (John) */}
         <img
           src="/images/john.png"
           alt="John"
-          className={`absolute left-[20px] top-0 z-10 w-[calc(50%+20px)] aspect-square transition-all duration-[600ms] ease-out ${
+          className={`absolute left-[20px] top-0 z-10 w-[calc(50%+20px)] md:w-[calc(45%+18px)] aspect-square transition-all duration-[600ms] ease-out ${
             showImages
               ? 'opacity-100 scale-100 -rotate-6'
               : 'opacity-0 scale-90 rotate-0'
@@ -52,7 +52,7 @@ function StartScreen({ onStartChat }) {
         <img
           src="/images/elly.png"
           alt="Elly"
-          className={`absolute right-[20px] top-0 z-10 w-[calc(50%+20px)] aspect-square transition-all duration-[600ms] ease-out ${
+          className={`absolute right-[20px] top-0 z-10 w-[calc(50%+20px)] md:w-[calc(45%+18px)] aspect-square transition-all duration-[600ms] ease-out ${
             showImages
               ? 'opacity-100 scale-100 rotate-6'
               : 'opacity-0 scale-90 rotate-0'
