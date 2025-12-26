@@ -1,8 +1,16 @@
-export default function MessageBubble({ message, sender, addTopMargin }) {
+import type { Message } from '../types';
+
+interface MessageBubbleProps {
+  message: Message;
+  sender: string;
+  addTopMargin: boolean;
+}
+
+export default function MessageBubble({ message, sender, addTopMargin }: MessageBubbleProps) {
   const isElly = sender === 'elly';
 
   // Format text to preserve newlines
-  const formatText = (text) => {
+  const formatText = (text: string) => {
     if (!text) return '';
     return text.split('\n').map((line, i, arr) => (
       <span key={i}>
@@ -30,4 +38,3 @@ export default function MessageBubble({ message, sender, addTopMargin }) {
     </div>
   );
 }
-

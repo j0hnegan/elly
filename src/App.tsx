@@ -4,9 +4,10 @@ import PhoneFrame from './components/PhoneFrame';
 import ChatHeader from './components/ChatHeader';
 import MessageList from './components/MessageList';
 import StartScreen from './components/StartScreen';
+import type { ConversationData } from './types';
 
 function App() {
-  const conversation = conversationData;
+  const conversation = conversationData as ConversationData;
   const [showChat, setShowChat] = useState(false);
 
   const handleStartChat = () => {

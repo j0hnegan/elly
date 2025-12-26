@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-function StartScreen({ onStartChat }) {
+interface StartScreenProps {
+  onStartChat: () => void;
+}
+
+function StartScreen({ onStartChat }: StartScreenProps) {
   const [showHeader, setShowHeader] = useState(false);
   const [showImages, setShowImages] = useState(false);
   const [showHeart, setShowHeart] = useState(false);
