@@ -56,8 +56,8 @@ function StartScreen({ onStartChat }) {
           }`}
         />
 
-        {/* Heart icon */}
-        <div className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 mt-[24px]">
+        {/* Heart icon - positioned at bottom of images */}
+        <div className="absolute z-20 left-1/2 -translate-x-1/2 -translate-y-1/2" style={{ top: 'calc(50% + 20px)' }}>
           <div
             className={`w-16 h-16 bg-[#FFD54F] rounded-full flex items-center justify-center shadow-md transition-all duration-500 ease-out ${
               showHeart ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
