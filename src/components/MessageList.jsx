@@ -17,7 +17,7 @@ export default function MessageList({ messages, participants }) {
   return (
     <div
       ref={listRef}
-      className="flex-1 overflow-y-auto pb-4"
+      className="h-full overflow-y-auto pb-4"
       style={{
         WebkitOverflowScrolling: 'touch',
       }}
