@@ -40,6 +40,16 @@ export default function MessageList({ messages, participants }) {
             />
           );
         })}
+
+        {/* The End image */}
+        <div className="flex justify-center mt-4">
+          <img
+            src="/images/the-end.png"
+            alt="The End"
+            className="h-auto"
+            style={{ maxWidth: '120px' }}
+          />
+        </div>
       </div>
     </div>
   );
