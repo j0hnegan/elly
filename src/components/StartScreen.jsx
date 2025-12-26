@@ -32,8 +32,11 @@ function StartScreen({ onStartChat }) {
         YOU MATCHED!
       </h1>
 
-      {/* Photos container */}
-      <div className="absolute top-[160px] left-0 right-0 h-[200px]">
+      {/* Photos container - uses padding-bottom to maintain aspect ratio */}
+      <div className="absolute top-[160px] left-0 right-0">
+        {/* Spacer to set container height based on image size */}
+        <div className="w-[calc(50%+20px)] aspect-square" />
+
         {/* Left photo (John) */}
         <img
           src="/images/john.png"
@@ -56,8 +59,8 @@ function StartScreen({ onStartChat }) {
           }`}
         />
 
-        {/* Heart icon - positioned at bottom of images */}
-        <div className="absolute z-20 left-1/2 -translate-x-1/2 -translate-y-1/2" style={{ top: 'calc(50vw + 20px)' }}>
+        {/* Heart icon - positioned at bottom center of images */}
+        <div className="absolute z-20 left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2">
           <div
             className={`w-16 h-16 bg-[#FFD54F] rounded-full flex items-center justify-center shadow-md transition-all duration-500 ease-out ${
               showHeart ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
