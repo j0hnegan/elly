@@ -17,24 +17,29 @@ export default function MessageList({ messages, participants }) {
   return (
     <div
       ref={listRef}
-      className="flex-1 overflow-y-auto pb-4"
+      className="h-full overflow-y-auto pb-4"
       style={{
         WebkitOverflowScrolling: 'touch',
       }}
     >
-      <div 
-        className="pt-20"
+      <div
+        className="pt-10"
         style={{
           paddingBottom: `calc(1rem + env(safe-area-inset-bottom))`,
         }}
       >
-        {validMessages.map((message) => (
-          <MessageBubble
-            key={message.id}
-            message={message}
-            sender={message.sender}
-          />
-        ))}
+        {validMessages.map((message, index) => {
+          const prevMessage = validMessages[index - 1];
+          const senderChanged = prevMessage && prevMessage.sender !== message.sender;
+          return (
+            <MessageBubble
+              key={message.id}
+              message={message}
+              sender={message.sender}
+              addTopMargin={senderChanged}
+            />
+          );
+        })}
       </div>
     </div>
   );

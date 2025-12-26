@@ -1,42 +1,73 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function StartScreen({ onStartChat }) {
+  const [showHeader, setShowHeader] = useState(false);
+  const [showImages, setShowImages] = useState(false);
+  const [showHeart, setShowHeart] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    // Staggered animations
+    const headerTimer = setTimeout(() => setShowHeader(true), 100);
+    const imagesTimer = setTimeout(() => setShowImages(true), 600);    // 0.5s after header
+    const heartTimer = setTimeout(() => setShowHeart(true), 850);     // 0.25s after images
+    const buttonTimer = setTimeout(() => setShowButton(true), 1350);  // 0.5s after heart
+
+    return () => {
+      clearTimeout(headerTimer);
+      clearTimeout(imagesTimer);
+      clearTimeout(heartTimer);
+      clearTimeout(buttonTimer);
+    };
+  }, []);
+
   return (
     <div className="relative h-full w-full bg-[#FFC629] px-6">
-      {/* Title - 96px from top */}
-      <h1 className="absolute top-[96px] left-0 right-0 text-center text-4xl font-extrabold text-black tracking-tight">
+      {/* Title */}
+      <h1
+        className={`absolute top-[96px] left-0 right-0 text-center text-4xl font-extrabold text-black tracking-tight transition-all duration-700 ease-out ${
+          showHeader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+        }`}
+      >
         YOU MATCHED!
       </h1>
 
-      {/* Photos container - 40px below header */}
-      <div className="absolute top-[160px] left-0 right-0 flex justify-center items-center">
+      {/* Photos container - uses padding-bottom to maintain aspect ratio */}
+      <div className="absolute top-[160px] left-0 right-0">
+        {/* Spacer to set container height based on image size */}
+        <div className="w-[calc(50%+20px)] md:w-[calc(45%+18px)] aspect-square" />
+
         {/* Left photo (John) */}
-        <div className="relative z-10 -rotate-6 -mr-8">
-          <div className="w-44 h-52 bg-white p-1.5 rounded-2xl shadow-lg">
-            <img
-              src="/images/john.jpg"
-              alt="John"
-              className="w-full h-full object-cover rounded-xl"
-            />
-          </div>
-        </div>
+        <img
+          src="/images/john.png"
+          alt="John"
+          className={`absolute left-[20px] top-0 z-10 w-[calc(50%+20px)] md:w-[calc(45%+18px)] aspect-square transition-all duration-[600ms] ease-out ${
+            showImages
+              ? 'opacity-100 scale-100 -rotate-6'
+              : 'opacity-0 scale-90 rotate-0'
+          }`}
+        />
 
         {/* Right photo (Elly) */}
-        <div className="relative z-10 rotate-6 -ml-8">
-          <div className="w-44 h-52 bg-white p-1.5 rounded-2xl shadow-lg">
-            <img
-              src="/images/elly.jpg"
-              alt="Elly"
-              className="w-full h-full object-cover rounded-xl"
-            />
-          </div>
-        </div>
+        <img
+          src="/images/elly.png"
+          alt="Elly"
+          className={`absolute right-[20px] top-0 z-10 w-[calc(50%+20px)] md:w-[calc(45%+18px)] aspect-square transition-all duration-[600ms] ease-out ${
+            showImages
+              ? 'opacity-100 scale-100 rotate-6'
+              : 'opacity-0 scale-90 rotate-0'
+          }`}
+        />
 
-        {/* Heart icon */}
-        <div className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-8">
-          <div className="w-20 h-20 bg-[#FFD54F] rounded-full flex items-center justify-center shadow-md">
+        {/* Heart icon - positioned at bottom center of images */}
+        <div className="absolute z-20 left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2">
+          <div
+            className={`w-16 h-16 bg-[#FFD54F] rounded-full flex items-center justify-center shadow-md transition-all duration-500 ease-out ${
+              showHeart ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
+            }`}
+          >
             <svg
-              className="w-10 h-10 text-white"
+              className="w-8 h-8 text-white"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -46,11 +77,13 @@ function StartScreen({ onStartChat }) {
         </div>
       </div>
 
-      {/* Button - 80px from bottom */}
+      {/* Button */}
       <div className="absolute bottom-[80px] left-0 right-0 flex justify-center">
         <button
           onClick={onStartChat}
-          className="px-12 py-4 bg-[#FFF4D9] text-[#C4960C] font-semibold text-[20px] rounded-full shadow-md hover:bg-[#FFEFCC] transition-colors"
+          className={`px-12 py-4 bg-[#FFF4D9] text-[#C4960C] font-semibold text-[20px] rounded-full hover:bg-[#FFEFCC] transition-all duration-500 ease-out ${
+            showButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
         >
           Start Chatting
         </button>

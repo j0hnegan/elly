@@ -17,27 +17,11 @@ function App() {
     setShowChat(false);
   };
 
-  // Chat content component (used in both mobile and desktop)
-  const ChatContent = () => (
-    <div className="flex flex-col h-full w-full bg-white">
-      <ChatHeader
-        title={conversation.meta?.title}
-        subtitle={conversation.meta?.subtitle}
-        onBack={handleBack}
-      />
-      <MessageList
-        messages={conversation.messages || []}
-        participants={conversation.meta?.participants || {}}
-      />
-    </div>
-  );
-
-  // Main content that switches between start screen and chat
-  const MainContent = () => (
+  const content = (
     <div className="relative h-full w-full overflow-hidden">
       {/* Start Screen */}
       <div
-        className={`absolute inset-0 transition-opacity duration-500 ${
+        className={`absolute inset-0 transition-opacity duration-500 ease-out ${
           showChat ? 'opacity-0 pointer-events-none' : 'opacity-100'
         }`}
       >
@@ -46,11 +30,22 @@ function App() {
 
       {/* Chat Screen */}
       <div
-        className={`absolute inset-0 transition-opacity duration-500 ${
+        className={`absolute inset-0 transition-opacity duration-500 ease-out ${
           showChat ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <ChatContent />
+        <div className="flex flex-col h-full w-full bg-white">
+          <ChatHeader
+            title={conversation.meta?.title}
+            onBack={handleBack}
+          />
+          <div className="flex-1 min-h-0 h-full">
+            <MessageList
+              messages={conversation.messages || []}
+              participants={conversation.meta?.participants || {}}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -60,13 +55,13 @@ function App() {
       {/* Mobile view - full screen */}
       <div className="md:hidden fixed inset-0 w-screen h-screen bg-white overflow-hidden">
         <div className="w-full h-full flex flex-col">
-          <MainContent />
+          {content}
         </div>
       </div>
 
       {/* Desktop view - phone frame */}
       <PhoneFrame>
-        <MainContent />
+        {content}
       </PhoneFrame>
     </>
   );

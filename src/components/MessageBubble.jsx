@@ -1,6 +1,6 @@
-export default function MessageBubble({ message, sender }) {
+export default function MessageBubble({ message, sender, addTopMargin }) {
   const isElly = sender === 'elly';
-  
+
   // Format text to preserve newlines
   const formatText = (text) => {
     if (!text) return '';
@@ -14,7 +14,7 @@ export default function MessageBubble({ message, sender }) {
 
   return (
     <div
-      className={`flex ${isElly ? 'justify-start' : 'justify-end'} mb-2 px-4`}
+      className={`flex ${isElly ? 'justify-start' : 'justify-end'} mb-2 px-4 ${addTopMargin ? 'mt-6' : ''}`}
     >
       <div
         className={`max-w-[75%] px-4 py-2.5 ${
