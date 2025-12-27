@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import MessageBubble from './MessageBubble';
 import TypingIndicator from './TypingIndicator';
 import type { Message, Participants } from '../types';
@@ -34,15 +34,18 @@ export default function MessageList({ messages }: MessageListProps) {
   const [visibleCount, setVisibleCount] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
   const [typingSender, setTypingSender] = useState<string | null>(null);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const timersRef = useRef<{ delay?: ReturnType<typeof setTimeout>; typing?: ReturnType<typeof setTimeout> }>({});
 
-  // Filter out empty messages
-  const validMessages = messages.filter(msg => msg.text && msg.text.trim());
+  // Memoize filtered messages to prevent recreation on every render
+  const validMessages = useMemo(
+    () => messages.filter(msg => msg.text && msg.text.trim()),
+    [messages]
+  );
 
-  const showNextMessage = useCallback(() => {
+  // Main effect to handle the message sequence
+  useEffect(() => {
+    // Check if we've shown all messages
     if (visibleCount >= validMessages.length) {
-      setIsTyping(false);
-      setTypingSender(null);
       return;
     }
 
@@ -51,53 +54,33 @@ export default function MessageList({ messages }: MessageListProps) {
     const senderChanged = prevMessage && prevMessage.sender !== currentMessage.sender;
 
     // Calculate initial delay before showing typing indicator
-    const initialDelay = senderChanged ? getSenderChangeDelay() : getSameSenderDelay();
+    const initialDelay = visibleCount === 0
+      ? 500 // First message - short delay
+      : senderChanged
+        ? getSenderChangeDelay()
+        : getSameSenderDelay();
 
-    // Show typing indicator after initial delay
-    timeoutRef.current = setTimeout(() => {
+    // Timer 1: Wait before showing typing indicator
+    timersRef.current.delay = setTimeout(() => {
       setTypingSender(currentMessage.sender);
       setIsTyping(true);
 
       // Calculate how long to show typing indicator based on message length
       const typingDuration = getTypingDuration(currentMessage.text);
 
-      // Show the actual message after typing duration
-      timeoutRef.current = setTimeout(() => {
+      // Timer 2: Show the actual message after typing duration
+      timersRef.current.typing = setTimeout(() => {
         setIsTyping(false);
         setTypingSender(null);
         setVisibleCount(prev => prev + 1);
       }, typingDuration);
     }, initialDelay);
+
+    return () => {
+      if (timersRef.current.delay) clearTimeout(timersRef.current.delay);
+      if (timersRef.current.typing) clearTimeout(timersRef.current.typing);
+    };
   }, [visibleCount, validMessages]);
-
-  // Start the message sequence
-  useEffect(() => {
-    if (visibleCount === 0 && validMessages.length > 0) {
-      // Start with a small delay
-      timeoutRef.current = setTimeout(() => {
-        showNextMessage();
-      }, 500);
-    }
-
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
-  }, []);
-
-  // Continue showing messages after each one appears
-  useEffect(() => {
-    if (visibleCount > 0 && visibleCount < validMessages.length) {
-      showNextMessage();
-    }
-
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
-  }, [visibleCount, showNextMessage]);
 
   // Auto-scroll to bottom when new messages appear or typing indicator shows
   useEffect(() => {
