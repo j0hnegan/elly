@@ -1,8 +1,14 @@
 import { useEffect, useRef } from 'react';
 import MessageBubble from './MessageBubble';
+import type { Message, Participants } from '../types';
 
-export default function MessageList({ messages, participants }) {
-  const listRef = useRef(null);
+interface MessageListProps {
+  messages: Message[];
+  participants: Participants;
+}
+
+export default function MessageList({ messages }: MessageListProps) {
+  const listRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Auto-scroll to top on initial load
@@ -44,4 +50,3 @@ export default function MessageList({ messages, participants }) {
     </div>
   );
 }
-

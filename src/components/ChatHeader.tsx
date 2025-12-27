@@ -1,4 +1,9 @@
-export default function ChatHeader({ title, onBack }) {
+interface ChatHeaderProps {
+  title?: string;
+  onBack: () => void;
+}
+
+export default function ChatHeader({ title, onBack }: ChatHeaderProps) {
   return (
     <div className="sticky top-0 z-10 bg-white border-b border-gray-200 pt-[24px]">
       <div className="flex items-center h-14 px-4">
